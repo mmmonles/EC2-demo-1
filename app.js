@@ -1,5 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
+const axios = require('axios');
 var app = express(); 
 
 // Body Parser Middleware
@@ -15,3 +16,9 @@ app.get('/test',function(req,res){
     var port = server.address().port;
     console.log("App now running on port", port);
  });
+
+ axios
+  .get("https://webhook.site/6d64fd3d-8528-4c6f-a46a-af3842bf1dd1")
+  .then(function (response) {
+    console.log(response);
+  });
