@@ -11,7 +11,7 @@ app.get('/test',function(req,res){
 });
 
 //Setting up server
- var server = app.listen(process.env.PORT || 8080, function () {
+ var server = app.listen(process.env.PORT || 443, function () {
     var port = server.address().port;
     console.log("App now running on port", port);
  });
